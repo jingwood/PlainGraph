@@ -1,4 +1,21 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////////////
+// 
+// PlainGraph
+// 
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+// KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+// PURPOSE.
+//
+// License: GNU Lesser General Public License (LGPLv3)
+//
+// Jing, Lu (lujing@unvell.com)
+//
+// Copyright (C) unvell.com, 2013. All Rights Reserved
+//
+///////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -35,10 +52,10 @@ namespace Unvell.UIControl.PlainGraph
 					graph = new PieGraph();
 					break;
 				//case PlainGraphType.Pie3D:
-				//  graph = new Pie3DGraph();
+				//  graph = new Pie3DGraph();           // not support yet
 				//  break;
 				//case PlainGraphType.ExplodedPie:
-				//  graph = new ExplodedPieGraph();
+				//  graph = new ExplodedPieGraph();     // not support yet
 				//  break;
 			}
 

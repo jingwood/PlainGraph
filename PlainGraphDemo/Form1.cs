@@ -1,4 +1,21 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////////////
+// 
+// PlainGraph
+// 
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+// KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+// PURPOSE.
+//
+// License: GNU Lesser General Public License (LGPLv3)
+//
+// Jing, Lu (lujing@unvell.com)
+//
+// Copyright (C) unvell.com, 2013. All Rights Reserved
+//
+///////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,27 +38,30 @@ namespace Unvell.UIControl.PlainGraphDemo
 		{
 			base.OnLoad(e);
 
-			DataSource ds = new DataSource("企業件数レポート");
+			// new data source
+			DataSource ds = new DataSource("PlainGraph Sample");
 
-			DataRecord dr = new DataRecord("中小企業");
-			dr.Color = Color.SkyBlue;  // 線の色を青に設定
-			dr.LineWeight = 2f; // 線の太さを2F設定
+			// new record
+			DataRecord dr = new DataRecord("DVD");
+			dr.Color = Color.SkyBlue; 
+			dr.LineWeight = 2f;       // line weight
 
-			dr.AddData("2010", 3000); // 2010年3000件
-			dr.AddData("2011", 3500); // 2011年3500件
-			dr.AddData("2012", 5000); // 2012年5000件
+			dr.AddData("2010", 3000);
+			dr.AddData("2011", 3500);
+			dr.AddData("2012", 5000);
 
-			ds.AddData(dr); // 作成したDataRecordをDataSourceに追加
+			// add record
+			ds.AddData(dr); 
 
-			// DataRecord を DataSource への簡単追加方法
-			ds.AddData("大手企業", new Dictionary<string, double>(){
+			// simple way to create record and add
+			ds.AddData("Book", new Dictionary<string, double>(){
 				{ "2010", 2100 },
 				{ "2011", 2700 },
 				{ "2012", 2550 },
-			}).LineWeight = 3f; // 線の太さを3Fに設定
+			}).LineWeight = 3f;
 
-			graph.DataSource = ds; //DataSourceをChartに設定
-			graph.GraphType = PlainGraphType.Column; // カラム形式に変更
+			graph.DataSource = ds; // update data source
+			graph.GraphType = PlainGraphType.Column; // change chart type
 		}
 	}
 }

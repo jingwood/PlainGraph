@@ -1,6 +1,23 @@
-﻿
+﻿///////////////////////////////////////////////////////////////////////////////
+// 
+// PlainGraph
+// 
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+// KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+// PURPOSE.
+//
+// License: GNU Lesser General Public License (LGPLv3)
+//
+// Jing, Lu (lujing@unvell.com)
+//
+// Copyright (C) unvell.com, 2013. All Rights Reserved
+//
+///////////////////////////////////////////////////////////////////////////////
+
 using System.Collections.Generic;
 using System;
+using System.Linq;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
@@ -183,7 +200,7 @@ namespace Unvell.UIControl.PlainGraph
 
 			return record;
 		}
-#if NET35
+
 		public DataRecord AddData(string title, IQueryable<KeyValuePair<string, int>> values, Color color)
 		{
 			DataRecord record = new DataRecord()
@@ -210,7 +227,7 @@ namespace Unvell.UIControl.PlainGraph
 
 			return record;
 		}
-#endif
+
 
 		public DataRecord AddData(string title, Dictionary<int, double> values)
 		{

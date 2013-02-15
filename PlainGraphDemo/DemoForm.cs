@@ -1,4 +1,21 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////////////
+// 
+// PlainGraph
+// 
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+// KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+// PURPOSE.
+//
+// License: GNU Lesser General Public License (LGPLv3)
+//
+// Jing, Lu (lujing@unvell.com)
+//
+// Copyright (C) unvell.com, 2013. All Rights Reserved
+//
+///////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,10 +45,10 @@ namespace Unvell.UIControl.PlainGraphTest
 
 			comboBox1.SelectedIndex = 2;
 
-			ds.Caption = "PlainGraph サンプルチャート";
+			ds.Caption = "PlainGraph Demo Chart";
 
-			ds.XTitle = "年度";
-			ds.YTitle = "会社種別";
+			ds.XTitle = "Year";
+			ds.YTitle = "Count";
 
 			// record 1
 			Dictionary<int, double> data1 = new Dictionary<int, double>();
@@ -42,7 +59,7 @@ namespace Unvell.UIControl.PlainGraphTest
 			data1.Add(2009, 680);
 			data1.Add(2010, 890);
 			data1.Add(2011, 1330);
-			DataRecord record = ds.AddData("個人事業", data1, Color.OliveDrab);
+			DataRecord record = ds.AddData("Book", data1, Color.OliveDrab);
 
 			record.Set[6].Style.EndCap = System.Drawing.Drawing2D.LineCap.DiamondAnchor;
 
@@ -54,7 +71,7 @@ namespace Unvell.UIControl.PlainGraphTest
 			data2.Add(2009, 750);
 			data2.Add(2010, 1290);
 			data2.Add(2011, 1630);
-			ds.AddData("中小企業", data2, Color.Orchid);
+			ds.AddData("Software", data2, Color.Orchid);
 
 			Dictionary<int, double> data3 = new Dictionary<int, double>();
 			data3.Add(2005, 320);
@@ -64,7 +81,7 @@ namespace Unvell.UIControl.PlainGraphTest
 			data3.Add(2009, 600);
 			data3.Add(2010, 670);
 			data3.Add(2011, 820);
-			ds.AddData("大手企業", data3, Color.SaddleBrown);
+			ds.AddData("DVD", data3, Color.SaddleBrown);
 
 			graph.DataSource = ds;
 		}
