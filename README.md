@@ -1,8 +1,7 @@
 PlainGraph
 ==========
 
-A tiny and lightweight .Net Chart Control. It shows 7 types of chart with one data source.
-The following types of chart are available:
+A tiny and lightweight .NET chart control. Supports 7 types of chart by using one unified data source.
 
  - Line
  - LinePoint
@@ -14,6 +13,4 @@ The following types of chart are available:
 
 This software is released under LGPLv3 license.
 
-  Jing, Lu (lujing@unvell.com)
-
-copyright (c) unvell.com 2012-2013 all rights reserved.
+copyright (c) unvell.com 2012-2015 all rights reserved.
