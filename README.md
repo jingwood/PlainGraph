@@ -11,6 +11,6 @@ A tiny and lightweight .NET chart control. Supports 7 types of chart by using on
  - Stacked Percent Column
  - Pie
 
-This software is released under LGPLv3 license.
+This software is released under MIT license.
 
 copyright (c) unvell.com 2012-2015 all rights reserved.
